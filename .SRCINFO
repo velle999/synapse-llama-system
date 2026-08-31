@@ -1,0 +1,17 @@
+pkgbase = synapse-llama-system
+	pkgdesc = Satisfies synapse-llama with the distribution's own llama.cpp — for machines that are not SynapseOS
+	pkgver = 0.1.0
+	pkgrel = 1
+	url = https://github.com/velle999/SYNAPSE
+	arch = any
+	license = GPL-2.0-or-later
+	depends = llama-cpp
+	depends = ggml
+	optdepends = ggml-cuda: GPU offload on NVIDIA — ggml loads it from /usr/lib/ggml at run time
+	optdepends = ggml-vulkan: GPU offload on AMD and Intel, and on NVIDIA without CUDA
+	optdepends = ggml-hip: GPU offload through ROCm instead of Vulkan
+	optdepends = ggml-blas: faster prompt processing on the CPU
+	provides = synapse-llama
+	conflicts = synapse-llama
+
+pkgname = synapse-llama-system
